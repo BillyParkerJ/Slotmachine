@@ -7,9 +7,6 @@ std::map<std::string, int> winningCombos =
 int main()
 {
     SlotMachine slotMachine;
-
-    std::cout << "TEST!!!!" << "\n";
-
     slotMachine.displayMenu();
 
     return 0;
@@ -38,6 +35,7 @@ bool SlotMachine::activateMachine()
     {
         if (coins > 0)
         {
+            coins -= 1;
             // Generate
             auto slots = SlotMachine::generateSlots();
 
